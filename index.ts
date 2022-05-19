@@ -9,6 +9,13 @@ interface User {
     completed: boolean;
 }
 
+const logger = (id: number, title: string, completed: boolean) => {
+    console.log(`
+    My id: ${id}    
+    My Title: ${title}    
+    My Completed: ${completed}    
+`);
+}
 
 axios.get(url).then(res => {
     const user = res.data as User
@@ -16,9 +23,5 @@ axios.get(url).then(res => {
     const title = user.title
     const completed = user.completed
 
-    console.log(`
-    My id: ${id}    
-    My Title: ${title}    
-    My Completed: ${completed}    
-`);
+    logger(id, title, completed)
 })

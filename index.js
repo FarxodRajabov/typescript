@@ -2,10 +2,13 @@
 exports.__esModule = true;
 var axios_1 = require("axios");
 var url = "https://jsonplaceholder.typicode.com/todos/1";
+var logger = function (id, title, completed) {
+    console.log("\n    My id: ".concat(id, "    \n    My Title: ").concat(title, "    \n    My Completed: ").concat(completed, "    \n"));
+};
 axios_1["default"].get(url).then(function (res) {
     var user = res.data;
-    var ID = user.id;
-    var Title = user.title;
-    var Completed = user.completed;
-    console.log("\n    My id: ".concat(ID, "    \n    My Title: ").concat(Title, "    \n    My Completed: ").concat(Completed, "    \n"));
+    var id = user.id;
+    var title = user.title;
+    var completed = user.completed;
+    logger(id, completed, title);
 });
