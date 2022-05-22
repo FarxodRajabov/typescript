@@ -33,7 +33,7 @@ let isCurrent: boolean;
 
 for (let i = 0; i < numbersTest.length; i++) {
     if (numbersTest[i] === 'one') {
-        isCurrent = false
+        isCurrent = true
     }
     
 }
