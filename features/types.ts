@@ -38,4 +38,15 @@ for (let i = 0; i < numbersTest.length; i++) {
     
 }
 
+// 3 - numbers | boolean
+
+const testNumbers = [ -9, -33, 3]
+let positive: boolean | number = false
+
+for (let i = 0; i < testNumbers.length; i++) {
+    if (testNumbers[i] > 0) {
+        positive = testNumbers[i]
+    }
+    
+}
 
