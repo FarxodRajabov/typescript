@@ -10,5 +10,5 @@ axios_1["default"].get(url).then(function (res) {
     var id = user.id;
     var title = user.title;
     var completed = user.completed;
-    logger(id, completed, title);
+    logger(id, title, completed);
 });
