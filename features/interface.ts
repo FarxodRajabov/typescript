@@ -1,13 +1,26 @@
 interface Public {
     name: string,
     color: string,
-    wheels: number
+    wheels: number,
+    speed(): number
 }
 
 const cars = {
     name: 'BMW',
     color: 'red',
-    wheels: 4
+    wheels: 4,
+    speed(): number {
+        return 150 * this.wheels
+    }
+}
+
+const bus = {
+    name: 'KUR',
+    color: 'yellow',
+    wheels: 2,
+    speed(): number {
+        return 100 * this.wheels
+    }
 }
 
 const myCar = (vehicles: Public ): void => {
@@ -15,8 +28,10 @@ const myCar = (vehicles: Public ): void => {
         My car ${vehicles.name},
         color is ${vehicles.color},
         number of wheels ${vehicles.wheels}
+        speed is ${vehicles.speed()}
     `);
     
 }
 
 myCar(cars)
+myCar(bus)
